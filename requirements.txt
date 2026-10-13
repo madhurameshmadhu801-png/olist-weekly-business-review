@@ -1,0 +1,14 @@
+# Core Data & Analytics
+pandas==2.3.3
+numpy==2.3.5
+
+# Visualisation
+matplotlib==3.10.7
+seaborn==0.13.2
+
+# PDF Report Generation & Verification
+reportlab==5.0.1
+pypdf==6.20.1
+
+# Optional orchestration / testing helpers
+kaggle==2.2.4
