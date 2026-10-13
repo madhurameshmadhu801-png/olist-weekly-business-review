@@ -1,0 +1,8 @@
+check,rows_failing,handling,reason
+Null or duplicate order_id in orders,0,passed,Primary key uniqueness violation. Pipeline cannot proceed with corrupt order keys.
+Delivered date earlier than purchase date,0,passed,Logistics tracking system timestamp discrepancy; flagged in dq_flag for operational review.
+Payment total not matching item price + freight (> 0.01 tolerance),375,flagged,"Discrepancy caused by customer financing interest, voucher credits, or banking rounding."
+Orders with no matching customer record,0,passed,Referential integrity failure. Every order must link to an identified customer.
+"Order items referencing missing orders, products or sellers",0,passed,"Orphan line items detected. Every line item must reference valid order, product, and seller."
+Delivered orders missing delivered date,8,flagged,Order marked delivered in status but carrier delivery timestamp is NULL.
+Review scores outside 1-5 or duplicate review_ids,1603,flagged,Customer satisfaction survey integrity; duplicates flagged to prevent double counting.
