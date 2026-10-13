@@ -1,0 +1,3 @@
+identification_method,total_customers,repeat_customers,single_order_customers,repeat_purchase_rate_pct
+customer_unique_id (CORRECT: permanent user identity),96096,2997,93099,3.1188
+customer_id (INCORRECT: order-scoped surrogate key),99441,0,99441,0.0
