@@ -886,6 +886,12 @@ def build_pdf_report(
     # Build the PDF document
     doc.build(story)
 
+    # Ensure both case variations exist
+    import shutil
+    alt_pdf = output_pdf.parent / "olist_weekly_business_review.pdf"
+    if str(output_pdf).lower() != str(alt_pdf).lower():
+        shutil.copyfile(output_pdf, alt_pdf)
+
     # Verify page count
     reader = PdfReader(str(output_pdf))
     page_count = len(reader.pages)

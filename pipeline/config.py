@@ -15,7 +15,7 @@ REPORTS_DIR = BASE_DIR / "reports"
 CHARTS_DIR = REPORTS_DIR / "charts"
 RESULTS_DIR = REPORTS_DIR / "results"
 DQ_SUMMARY_PATH = REPORTS_DIR / "dq_summary.csv"
-FINAL_PDF_PATH = REPORTS_DIR / "olist_weekly_business_review.pdf"
+FINAL_PDF_PATH = REPORTS_DIR / "Olist_Weekly_Business_Review.pdf"
 
 # SQL Directory Paths
 SQL_DIR = BASE_DIR / "sql"
